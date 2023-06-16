@@ -1,1 +1,26 @@
-<p>details works!</p>
+<article>
+  <img
+    class="listing-photo"
+    [src]="housingLocation?.photo"
+    alt="Exterior photo of {{ housingLocation?.name }}"
+  />
+  <section class="listing-description">
+    <h2 class="listing-heading">{{ housingLocation?.name || "N/A" }}</h2>
+    <p class="listing-location">
+      {{ housingLocation?.city || "N/A" }},
+      {{ housingLocation?.state || "N/A" }}
+    </p>
+  </section>
+  <section class="listing-features">
+    <h2 class="section-heading">About this housing location</h2>
+    <ul>
+      <li>Units available: {{ housingLocation?.availableUnits || "N/A" }}</li>
+      <li>
+        Does this location have wifi: {{ housingLocation?.wifi || "N/A" }}
+      </li>
+      <li>
+        Does this location have laundry: {{ housingLocation?.laundry || "N/A" }}
+      </li>
+    </ul>
+  </section>
+</article>
